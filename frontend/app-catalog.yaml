@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: kilahm_frontend
+  description: playing with harnessidp
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: harnessworkshop/harness_auto
+    #harness.io/pipelines: |
+    #  build and deploy: TBD
+  tags:
+    - kilahm
+    - frontend
+spec:
+  type: service
+  owner: github_bot@mheducation.com
+  lifecycle: experimental
+  consumesApis:
+    - spotify
+  providesApis:
+    - petstore
+#  dependsOn:
+#    - component:default/yournamehere_db
